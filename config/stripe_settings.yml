@@ -1,0 +1,14 @@
+development: 
+  stripe:
+    secret_key: sk_test_U0p4y2wgWxhsKhvzG3t8VN5u
+    publishable_key: pk_test_mDhnfvh23zWRh13s63KIeAY7
+
+test: 
+  stripe:
+    secret_key: sk_test_U0p4y2wgWxhsKhvzG3t8VN5u
+    publishable_key: pk_test_mDhnfvh23zWRh13s63KIeAY7
+
+production:
+  stripe:
+    secret_key: sk_test_U0p4y2wgWxhsKhvzG3t8VN5u
+    publishable_key: pk_test_mDhnfvh23zWRh13s63KIeAY7

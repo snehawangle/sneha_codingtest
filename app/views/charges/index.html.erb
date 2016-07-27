@@ -1,0 +1,27 @@
+<% if @transactions.present? %>
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Your Email</th>
+      <th>Transaction Date</th>
+      <th>Transactio Amount</th>
+      <th>Transaction Number</th>
+    </tr>
+  </thead>
+  <tbody>
+	    <% @transactions.each_with_index do |transaction, index| %>
+	    <tr>
+	      <th scope="row"><%= index + 1 %></th>
+	      <td><%= transaction.user.email %></td>
+	      <td><%= transaction.created_at.strftime("%d-%m-%Y")%></td>
+	      <td><%= transaction.amount %></td>
+	      <td><%= transaction.transaction_number %></td>
+	    </tr>    
+	    <% end %>
+  </tbody>
+</table>
+    <% else %>
+    	You Have Not Made Transactions Yet. <br/>
+    <% end %>
+<%= link_to "Back to Dashboard", dashboard_path, class: "btn btn-info"%>
